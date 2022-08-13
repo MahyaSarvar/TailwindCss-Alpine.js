@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tailwind-cli</title>
+    <link rel="stylesheet" href="./build/tailwind.css">
+</head>
+
+<body class="bg-blue-700 flex justify-center items-center h-screen">
+    <div x-data="{Tab : 1}" class="max-w-md flex flex-col gap-4 w-full">
+
+        <div class="bg-blue-300 p-1 max-w-md rounded-xl flex justify-between gap-4 font-bold text-white">
+            <button @click="Tab = 1" :class="Tab === 1 ? 'bg-white text-blue-600' : ''" class="flex-1 p-2 hover:bg-blue-200 rounded-xl flex justify-center focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600 focus:ring-opacity-50 ">tab first</button> 
+            <button @click="Tab = 2" :class="Tab === 2 ? 'bg-white text-blue-600' : ''" class="flex-1 p-2 hover:bg-blue-200 rounded-xl flex justify-center focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600 focus:ring-opacity-50 ">tab second</button> 
+            <button @click="Tab = 3" :class="Tab === 3 ? 'bg-white text-blue-600' : ''" class="flex-1 p-2 hover:bg-blue-200 rounded-xl flex justify-center focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600 focus:ring-opacity-50 ">tab third</button>
+        </div>
+
+        <div class="bg-white p-2 rounded-xl">
+            <div x-show="Tab === 1">
+                <div class="hover:bg-gray-100 px-2 py-4 rounded-xl">
+                    <p class="mb-2 font-bold text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing?</p>
+                    <div class="text-gray-400 text-sm">5 hour ago &bull; 5 comments &bull; 2 shares</div>
+                </div>
+                <div class="hover:bg-gray-100 px-2 py-4 rounded-xl">
+                    <p class="mb-2 font-bold text-sm">Lorem ipsum dolor sit amet consectetur adipisicing?</p>
+                    <div class="text-gray-400 text-sm">5 hour ago &bull; 5 comments &bull; 2 shares</div>
+                </div>
+            </div>
+
+            <div x-show="Tab === 2">
+                <div class="hover:bg-gray-100 px-2 py-4 rounded-xl">
+                    <p class="mb-2 font-bold text-sm">Lorem ipsum dolor sit amet?</p>
+                    <div class="text-gray-400 text-sm">5 hour ago &bull; 5 comments &bull; 2 shares</div>
+                </div>
+                <div class="hover:bg-gray-100 px-2 py-4 rounded-xl">
+                    <p class="mb-2 font-bold text-sm">Lorem ipsum dolor sit amet?</p>
+                    <div class="text-gray-400 text-sm">5 hour ago &bull; 5 comments &bull; 2 shares</div>
+                </div>
+            </div>
+
+            <div x-show="Tab === 3">
+                <div class="hover:bg-gray-100 px-2 py-4 rounded-xl">
+                    <p class="mb-2 font-bold text-sm">Lorem ipsum dolor sit amet, consectetur?</p>
+                    <div class="text-gray-400 text-sm">5 hour ago &bull; 5 comments &bull; 2 shares</div>
+                </div>
+                <div class="hover:bg-gray-100 px-2 py-4 rounded-xl">
+                    <p class="mb-2 font-bold text-sm">Lorem ipsum dolor sit amet consectetur?</p>
+                    <div class="text-gray-400 text-sm">5 hour ago &bull; 5 comments &bull; 2 shares</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="//unpkg.com/alpinejs" defer></script>
+</body>
+
+</html>
